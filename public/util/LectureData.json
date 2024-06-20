@@ -1,0 +1,69 @@
+
+{
+    "lectures": [
+        {
+            "id": 1,
+            "title": "Introduction to React",
+            "img" : "/src/assets/18.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 2,
+            "title": "Html/Css",
+            "img" : "/src/assets/14.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New","update"]
+        },
+        {
+            "id": 3,
+            "title": "Introduction to React",
+            "img" : "/src/assets/15.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 4,
+            "title": "Introduction to React",
+            "img" : "/src/assets/16.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 5,
+            "title": "Introduction to React",
+            "img" : "/src/assets/17.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 6,
+            "title": "Introduction to React",
+            "img" : "/src/assets/19.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 7,
+            "title": "Introduction to React",
+            "img" : "/src/assets/20.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        },
+        {
+            "id": 8,
+            "title": "Introduction to React",
+            "img" : "/src/assets/21.png",
+            "name": "John Doe",
+            "price": "49500",
+            "tag" : ["Hot","New"]
+        }
+    ]
+}
