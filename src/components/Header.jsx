@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const Head = styled.div`
     display:flex;
     position:fixed;
@@ -21,7 +21,10 @@ const Head = styled.div`
         width:500px;
         background-color:rgb(230,230,230);
     }
-    
+    a {
+     text-decoration: none;
+     color:black;
+    }
 `
 const Nav = styled.div`
     margin:20px 10px;
@@ -29,20 +32,23 @@ const Nav = styled.div`
      > ul{
         list-style: none; 
         display:flex;
-        
      }
     li {
         margin:0px 30px;
+        color:black;
+    }
+    a {
+     text-decoration: none;
     }
 `
 const Header = () => {
     return (
         <Head>
-            <h2>10012</h2>
+            <h2><Link to={"/"}>10012</Link></h2>
             <input type="text" placeholder="듣고싶은 강의를 검색하세요" />
             <Nav>
                 <ul>
-                    <li>강의</li>
+                    <Link to={"/All"}><li>강의</li></Link>
                     <li>커뮤니티</li>
                     <li>수강후기</li>
                     <li>로그인</li>
