@@ -49,7 +49,7 @@ const Header = () => {
             <Nav>
                 <ul>
                     <Link to={"/All"}><li>강의</li></Link>
-                    <li>커뮤니티</li>
+                    <Link to={"/comu"}><li>커뮤니티</li></Link>
                     <li>수강후기</li>
                     <li>로그인</li>
                     <li>회원가입</li>

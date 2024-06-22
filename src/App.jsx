@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import {Routes ,Route} from "react-router-dom"
 import All from './pages/All';
+import Comu from './pages/Comu';
 export const LectContext = createContext(null);
 function App() {
   const [lectures, setlectures] = useState([]);
@@ -27,6 +28,7 @@ function App() {
     <Routes >
     <Route path ="/" element ={<Main lectures ={lectures}/>} /> 
     <Route path ="/All" element ={<All lectures ={lectures}/>} /> 
+    <Route path ="/comu" element ={<Comu />} /> 
     
     </Routes>
     </LectContext.Provider>
