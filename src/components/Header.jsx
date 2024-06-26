@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 const Head = styled.div`
     display:flex;
     position:fixed;
@@ -42,6 +43,7 @@ const Nav = styled.div`
     }
 `
 const Header = () => {
+    
     return (
         <Head>
             <h2><Link to={"/"}>10012</Link></h2>
@@ -51,8 +53,9 @@ const Header = () => {
                     <Link to={"/All"}><li>강의</li></Link>
                     <Link to={"/comu"}><li>커뮤니티</li></Link>
                     <li>수강후기</li>
+                    <Link to={"/cart"}><li>장바구니</li></Link>
                     <li>로그인</li>
-                    <li>회원가입</li>
+                    
                 </ul>
             </Nav>
 

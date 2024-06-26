@@ -1,7 +1,6 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 const LectureCard = styled.div`
-  
     width:250px;
     height:360px;
     display:inline-block;
@@ -14,13 +13,11 @@ const LectureCard = styled.div`
     transform: scale(1.05) translateY(-15px) ;
     }
 `
-
 const Image = styled.div`
     img {
         width:250px;
         height:200px;   
     } 
-         
 `
 const Text = styled.div`
     text-align:center;
@@ -38,9 +35,10 @@ const Text = styled.div`
     }
 `
 
-const Lecture = ({ img, title, name, price, tag }) => {
+const Lecture = ({ id,img, title, name, price, tag }) => {
 
     return (
+        <Link to={`/detail/${id}`}>
         <LectureCard>
             <Image>
                 <img src={img} alt="" />
@@ -52,7 +50,7 @@ const Lecture = ({ img, title, name, price, tag }) => {
                 <p>{tag.map((t)=><li key ={t.id}>{t}</li>)}</p>
             </Text>
         </LectureCard>
-
+        </Link>
     );
 }
 export default Lecture;

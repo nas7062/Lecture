@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import {Routes ,Route} from "react-router-dom"
 import All from './pages/All';
 import Comu from './pages/Comu';
+import Detail from './pages/Detail';
+import Cart from './pages/Cart';
 export const LectContext = createContext(null);
 function App() {
   const [lectures, setlectures] = useState([]);
@@ -28,7 +30,9 @@ function App() {
     <Routes >
     <Route path ="/" element ={<Main lectures ={lectures}/>} /> 
     <Route path ="/All" element ={<All lectures ={lectures}/>} /> 
+    <Route path ="/detail/:id" element ={<Detail lectures ={lectures}/>} /> 
     <Route path ="/comu" element ={<Comu />} /> 
+    <Route path ="/cart" element ={<Cart />} /> 
     
     </Routes>
     </LectContext.Provider>
