@@ -6,7 +6,7 @@ const Head = styled.div`
     display:flex;
     position:fixed;
     z-index:1;
-    margin :30px 50px;
+    margin :30px 0px;
     align-items: center;
     justify-content : center;
     border-top:1px solid grey;
@@ -35,8 +35,9 @@ const Nav = styled.div`
         display:flex;
      }
     li {
-        margin:0px 30px;
+        margin:10px 20px;
         color:black;
+        width:70px;
     }
     a {
      text-decoration: none;

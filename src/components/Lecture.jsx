@@ -22,12 +22,16 @@ const Image = styled.div`
 const Text = styled.div`
     text-align:center;
     position:relative;
+    
     & li {
         list-style:none;
         display: inline-block;
+        width:50px;
+        position:relative;
+        top:-20px;
         margin-right:10px;
         padding:2px 5px;
-        margin-top: -10px;
+        margin-top: 10px;
         color:red;
         font-weight:600;
         border: 1px solid red;

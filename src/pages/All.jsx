@@ -4,7 +4,7 @@ import LectureList from "../components/LectureList";
 
 const MainSection = styled.div`
     position:absolute;
-    top:16%;
+    top:20%;
     left:10%;
     & h2 {
         margin-bottom:50px;
