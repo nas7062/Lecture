@@ -69,11 +69,11 @@ const Post = () =>{
         <Form onSubmit={submitHandler}>
             <Title >
                 <label>제목</label>
-                <input type="text" value={title} onChange={(e)=>settitle(e.target.value)}/>
+                <input type="text" value={title} placeholder="제목을 작성해주세요" onChange={(e)=>settitle(e.target.value)}/>
             </Title>
             <Title>
                 <label >내용</label>
-                <textarea  value={content} onChange={(e)=>setcontent(e.target.value)}></textarea>
+                <textarea  placeholder="질문하고 싶은 내용을 작성해주세요." value={content} onChange={(e)=>setcontent(e.target.value)}></textarea>
             </Title>
             <Btn>
                 <button type="submit" onClick={()=>navigate(-1)} >작성하기</button>

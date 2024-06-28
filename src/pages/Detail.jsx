@@ -105,7 +105,7 @@ const Detail = () =>{
                     <Text><h2>{item.title}</h2>
                     <h2>{item.name}</h2>
                     
-                    {item.tag.map(item=><p>#{item}</p>)}</Text>
+                    {item.tag.map((item,idx)=><p key={idx}>#{item}</p>)}</Text>
                     <button onClick={()=>dispatch(addCart(item))}>
                         ADD TO CART
                     </button>
