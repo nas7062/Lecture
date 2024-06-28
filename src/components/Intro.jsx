@@ -6,51 +6,60 @@ const Descript = styled.div`
     font-weight:600;
     font-size:1.5rem;
     text-align:center;
-    line-height:50px;
+    line-height:40px;
     position:relative;
     left:100px;
+    margin-bottom:200px;
 `
 const CurList = styled.ul`
-    
     display:flex;
     flex-direction:column;
     width:550px;
     position:relative;
     left:100px;
+    
     & li {
         list-style:none;
         border:1px solid grey;
         padding:10px 20px;
         border-radius:10px;
         background-color:whites;
+        cursor:pointer;
     }
     & li:first-child {
-    background-color:#d3d3d3;
+        background-color:#d3d3d3;
+        cursor:pointer;
     }
-
 `
-const Intro = ({id}) =>{
+const CurSec = styled.div`
+    & h2 {
+        position:relative;
+        left:150px;
+        margin-bottom:50px;
+    }
+`
+const Intro = ({id, el,el2}) =>{
     const lectures = useContext(LectContext);
     const filterLect=  lectures.filter((item)=>Number(item.id) ===Number(id.id));
     const [openIndex, setOpenIndex] = useState(null);  
-
     const ClickHandler = (index) => {
         setOpenIndex(openIndex === index ? null : index); 
     };
     return(
-        <div>
-            {filterLect.map((item,idx)=><div key={idx}>
+        <div >
+            {filterLect.map((item,idx)=><div ref={el2} key={idx}>
                 <Descript>{item.descript.map((item,idx)=><p key={idx}>{item}</p>)}</Descript>
+                <CurSec>
+                    <h2 >커리큘럼</h2>
               {item.curriculum.map((cur,idx)=>
-                    <CurList key={idx}>
+                    <CurList key={idx} ref={el}>
+                        
                         <li  onClick={() => ClickHandler(idx)}><h3>{cur.section}</h3></li>
                         {openIndex ===idx && cur.lectures.map((item,idx)=><li key={idx} >{item}</li>)}
                     </CurList>
              )}
+             </CurSec>
             </div>)}
-            <div>
-                <p>새소식이 없습니다...</p>
-            </div>
         </div>
     );
 }

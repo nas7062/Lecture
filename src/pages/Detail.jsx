@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import { useDispatch } from "react-redux";
 import { addCart } from "../reducer/cartSlice";
 import { useParams } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef, useState  } from "react";
 import { LectContext } from "../App";
 import styled from "styled-components";
 import Intro from "../components/Intro";
@@ -68,13 +68,33 @@ const Navbar = styled.div`
         cursor:pointer;
     }
 `
+const New = styled.div`
+    text-align:center;
+    font-size:1.5rem;
+    position:relative;
+    top:100px;
+`
 const Detail = () =>{
     const lectures = useContext(LectContext);
     const dispatch = useDispatch();
     const id =useParams();
     const filterLect=  lectures.filter((item)=>Number(item.id) ===Number(id.id));
-    
-    
+    const [isOpen,setisOpen] = useState(false);
+    const el = useRef();
+    const onMoveBox = () => {
+        el.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    const onMoveBox2 = () => {
+        el2.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    };
+    const el2 = useRef();
+    const CloseHandler =() =>{
+        setisOpen(false);
+        
+    }
+    const OpenHandler = ()=>{
+            setisOpen(true);
+    }
     
     return(
         <>
@@ -92,13 +112,13 @@ const Detail = () =>{
             </DetailNav>)}
             <Navbar>
                 <ul>
-                    <li >강의소개</li>
-                    <li >커리큘럼</li>
-                    <li >새소식</li>
+                    <li onClick={()=>{onMoveBox2();CloseHandler();}}>강의소개</li>
+                    <li onClick={()=>{onMoveBox();CloseHandler();}}>커리큘럼</li>
+                    <li onClick={OpenHandler}>새소식</li>
                 </ul>
             </Navbar>
-           <div>
-            <Intro id ={id}/>
+           <div >   
+            { !isOpen ? <Intro id ={id} el={el} el2 ={el2}/> : <New> 새소식이 없습니다...</New>}
            </div>
             </DetailSection>
         </>

@@ -7,6 +7,8 @@ import All from './pages/All';
 import Comu from './pages/Comu';
 import Detail from './pages/Detail';
 import Cart from './pages/Cart';
+import Post from './components/Post';
+import ComuDetail from './pages/ComuDetail';
 export const LectContext = createContext(null);
 function App() {
   const [lectures, setlectures] = useState([]);
@@ -31,8 +33,10 @@ function App() {
     <Route path ="/" element ={<Main lectures ={lectures}/>} /> 
     <Route path ="/All" element ={<All lectures ={lectures}/>} /> 
     <Route path ="/detail/:id" element ={<Detail lectures ={lectures}/>} /> 
+    <Route path ="/comu/:id" element ={<ComuDetail lectures ={lectures}/>} /> 
     <Route path ="/comu" element ={<Comu />} /> 
     <Route path ="/cart" element ={<Cart />} /> 
+    <Route path ="/post" element ={<Post />} /> 
     
     </Routes>
     </LectContext.Provider>
