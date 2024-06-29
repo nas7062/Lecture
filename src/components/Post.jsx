@@ -65,7 +65,6 @@ const Post = () =>{
     return(
         <>
         <Header/>
-        
         <Form onSubmit={submitHandler}>
             <Title >
                 <label>제목</label>

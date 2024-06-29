@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import styled from "styled-components";
 import { useState } from "react";
-import { addRepple } from "../reducer/postSlice";
-
+import { PlusLike, addRepple } from "../reducer/postSlice";
+import { imageList } from "../../public/util/imageList";
 const ComuSection = styled.div`
     position:absolute;
     top:20%;
@@ -12,6 +12,22 @@ const ComuSection = styled.div`
     border:1px solid black;
     width:600px;
     height:600px;
+    
+    & img {
+        width:30px;
+        display:inline-block;
+        position:relative;
+        left:80%;
+        cursor:pointer;
+    }
+    span {
+        position:relative;
+        left:82%;
+        font-size:1.5rem;
+    }
+    h2 {
+     display:inline-block;
+    }
 `
 const RepleSction = styled.div`
      position:absolute;
@@ -49,12 +65,15 @@ const ComuDetail = () => {
     const dispatch = useDispatch();
     const [reple, Setreple] = useState("");
     const filterpost = posts.filter((item) => Number(item.id) === Number(id.id));
-
+    
     const RepleHandler = () => {
         if (reple) {
             dispatch((addRepple({ postId: Number(id.id), reple: reple })));
             Setreple("");
         }
+    }
+    const LikeHandler = () =>{
+        dispatch(PlusLike(Number(id.id)));
     }
     console.log(posts.repple);
     return (
@@ -62,6 +81,8 @@ const ComuDetail = () => {
             <Header />
             {filterpost.map((item, idx) => <ComuSection key={idx}>
                 <h2>{item.title}</h2>
+                <img src={imageList[20]} alt="" onClick={LikeHandler} />
+                <span>{item.good}</span>
                 <p>{item.content}</p>
             </ComuSection>)}
             <RepleSction>

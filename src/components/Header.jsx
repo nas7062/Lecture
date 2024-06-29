@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Head = styled.div`
     display:flex;
@@ -39,13 +40,19 @@ const Nav = styled.div`
         margin:10px 20px;
         color:black;
         width:70px;
+        > span {
+            color:red;
+            position:relative;
+            top:-30px;
+            left:70px;
+        }
     }
     a {
      text-decoration: none;
     }
 `
 const Header = () => {
-    
+    const carts = useSelector((state)=>state.carts);
     return (
         <Head>
             <h2><Link to={"/"}>10012</Link></h2>
@@ -55,7 +62,9 @@ const Header = () => {
                     <Link to={"/All"}><li>강의</li></Link>
                     <Link to={"/comu"}><li>커뮤니티</li></Link>
                     <li>수강후기</li>
-                    <Link to={"/cart"}><li>장바구니</li></Link>
+                    <Link to={"/cart"}><li>장바구니<span>
+                        {carts.length ===0 ? " " :carts.length}
+                        </span></li></Link>
                     <li>로그인</li>
                     
                 </ul>

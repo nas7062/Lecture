@@ -6,6 +6,7 @@ import styled from "styled-components";
 const CartSection = styled.div`
     position:absolute;
     top:30%;
+    left:10%;
     display:flex;
     flex-direction:column;
     width:1500px;
