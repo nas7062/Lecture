@@ -42,7 +42,7 @@ const Text = styled.div`
 const Lecture = ({ id,img, title, name, price, tag }) => {
 
     return (
-        <Link to={`/load/${id}`}>
+        <Link to={`/detail/${id}`}>
         <LectureCard>
             <Image>
                 <img src={img} alt="" />

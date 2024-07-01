@@ -18,6 +18,7 @@ const DetailNav = styled.div`
     margin-left:-20px;
     background-color:black;
     color:white;
+    
     & img{
         position:relative;
         margin-left:300px;
@@ -66,6 +67,7 @@ const Navbar = styled.div`
     & li {
         list-style:none;
         cursor:pointer;
+        
     }
 `
 const New = styled.div`
@@ -112,7 +114,9 @@ const Detail = () =>{
                 <ul>
                     <li onClick={()=>{onMoveBox2();CloseHandler();}}>강의소개</li>
                     <li onClick={()=>{onMoveBox();CloseHandler();}}>커리큘럼</li>
+                    <li onClick={()=>{onMoveBox();CloseHandler();}}>강의후기</li>
                     <li onClick={OpenHandler}>새소식</li>
+                    
                 </ul>
             </Navbar>
            <div >   

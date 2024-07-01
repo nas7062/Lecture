@@ -76,9 +76,8 @@ const Header = ({search,SearchHandler}) => {
             <input type="text" placeholder="듣고싶은 강의를 검색하세요" onChange={SearchHandler}/>
             <Nav>
                 <ul>
-                    <Link to={"/All"}><li>강의</li></Link>
+                    <Link to={"/All"}><li>강의정보</li></Link>
                     <Link to={"/comu"}><li>커뮤니티</li></Link>
-                    <li>수강후기</li>
                     <Link to={"/cart"}><li>장바구니<span>
                         {carts.length ===0 ? " " :carts.length}
                         </span></li></Link>

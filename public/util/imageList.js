@@ -19,7 +19,11 @@ import back from "../../src/assets/back.png";
 import css from "../../src/assets/css.png";
 import robot from "../../src/assets/robot.png";
 import up from "../../src/assets/up.png";
+import l1 from "../../src/assets/load1.png";
+import l2 from "../../src/assets/load2.png";
+import l3 from "../../src/assets/load3.png";
+import l4 from "../../src/assets/load4.png";
 export const imageList =[img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,
-    back,css,robot,img13,img14,img15,img16,img17,up
+    back,css,robot,img13,img14,img15,img16,img17,up,l1,l2,l3,l4
 ];
     

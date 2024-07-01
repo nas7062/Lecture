@@ -26,6 +26,12 @@ const ModalContent = styled.div`
         height:30px;
         margin-bottom:10px;
     }
+    & textarea{
+        width:400px;
+        height:100px;
+        margin-bottom:10px;
+        font-size:1.2rem;
+    }
     span
     {
         border:0px;
@@ -45,6 +51,12 @@ const ModalContent = styled.div`
         position:relative;
         left:200px;
         cursor:pointer;
+    }
+    select {
+        width:400px;
+        height:40px;
+        font-size:1.5rem;
+        margin-bottom:10px;
     }
 `;
 
