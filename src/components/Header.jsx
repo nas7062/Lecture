@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import Login from "../pages/Login";
+import Modal from "./Modal";
+import { auth } from "../firebase/firebase";
+import { signOut } from "firebase/auth";
 const Head = styled.div`
     display:flex;
     position:fixed;
@@ -40,6 +43,7 @@ const Nav = styled.div`
         margin:10px 20px;
         color:black;
         width:70px;
+        cursor:pointer;
         > span {
             color:red;
             position:relative;
@@ -51,12 +55,25 @@ const Nav = styled.div`
      text-decoration: none;
     }
 `
-const Header = () => {
+const Header = ({search,SearchHandler}) => {
     const carts = useSelector((state)=>state.carts);
+    const [open,setopen] = useState(false);
+    const logoutHandler = () => {
+        signOut(auth)
+            .then(() => {
+                console.log("로그아웃 성공");
+            })
+            .catch((error) => {
+                console.error("로그아웃 오류:", error);
+                alert(error.message);
+            });
+            
+    };
+    
     return (
         <Head>
             <h2><Link to={"/"}>10012</Link></h2>
-            <input type="text" placeholder="듣고싶은 강의를 검색하세요" />
+            <input type="text" placeholder="듣고싶은 강의를 검색하세요" onChange={SearchHandler}/>
             <Nav>
                 <ul>
                     <Link to={"/All"}><li>강의</li></Link>
@@ -65,11 +82,13 @@ const Header = () => {
                     <Link to={"/cart"}><li>장바구니<span>
                         {carts.length ===0 ? " " :carts.length}
                         </span></li></Link>
-                    <li>로그인</li>
-                    
+                    {!auth.currentUser ? <li onClick={()=>setopen(true)}>로그인</li>
+                    :<li onClick={logoutHandler}>로그아웃</li>}
                 </ul>
             </Nav>
-
+                <Modal isOpen={open} onClose={()=>setopen(false)}>
+                    <Login onClose={()=>setopen(false)}/>
+                </Modal>
 
         </Head>
 

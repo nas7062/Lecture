@@ -77,7 +77,7 @@ const Descript = styled.div`
 const Point = () => {
     return (
         <PointWarp id ="wrap">
-            <h3>학습 환경</h3>
+            <h2>학습 환경</h2>
             <h2>누구나 쉽고 재미있게 오랫동안 학습할 수 있어요!</h2>
             <SectionWrap>
                 <FirstSection>

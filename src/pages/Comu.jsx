@@ -44,8 +44,9 @@ const Nav = styled.div`
     }
 `
 const Comu = () =>{
-    const [search,setsearch] = useState("");
+    
     const navigate = useNavigate();
+    const [search,setsearch] = useState("");
     const SearchHandler = (e) =>{
         setsearch(e.target.value);
     }

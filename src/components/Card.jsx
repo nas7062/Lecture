@@ -1,3 +1,4 @@
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Cardslice = styled.div`
@@ -12,20 +13,24 @@ const Cardslice = styled.div`
     > h3:first-child {
     color:green;
     }
+    h3 {
+        color:black;
+    }
     > img{
         width:80px;
     
     }
 `
-const Card = ({eng,kor,img})=>{
-
+const Card = ({eng,kor,img,id})=>{
+   
     return(
+        <Link to={`/load/${id}`}>
             <Cardslice>
                 <h3>{eng}</h3>
                 <h3>{kor}</h3>
                 <img src={img} alt="aaa" />
             </Cardslice>
-
+        </Link>
     );
 }
 

@@ -24,11 +24,11 @@ const FieldSection = () => {
         </Title>
         <Field>
             <Button  img={imageList[6]} text="기초강의" nav="/All"/>
-            <Button img={imageList[7]} text="데이터 분석"/>
-            <Button img={imageList[12]} text="웹 개발"/>
-            <Button img={imageList[9]} text="프로그래밍 언어"/>
-            <Button img={imageList[10]} text="인공지능"/>
-            <Button img={imageList[8]} text="디자인"/>
+            <Button img={imageList[7]} text="데이터 분석" nav="/All"/>
+            <Button img={imageList[12]} text="웹 개발" nav="/All"/>
+            <Button img={imageList[9]} text="프로그래밍 언어" nav="/All"/>
+            <Button img={imageList[10]} text="인공지능" nav="/All"/>
+            <Button img={imageList[8]} text="디자인" nav="/All"/>
         </Field>
         </>
     );

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { addCart } from "../reducer/cartSlice";
 import { useParams } from "react-router-dom";
 import { useContext, useRef, useState  } from "react";
-import { LectContext } from "../App";
+import { LoadContext } from "../App";
 import styled from "styled-components";
 import Intro from "../components/Intro";
 const DetailSection = styled.div`
@@ -74,11 +74,11 @@ const New = styled.div`
     position:relative;
     top:100px;
 `
-const Detail = () =>{
-    const lectures = useContext(LectContext);
+const LoadDetail = () =>{
+    const loads = useContext(LoadContext);
     const dispatch = useDispatch();
     const id =useParams();
-    const filterLect=  lectures.filter((item)=>Number(item.id) ===Number(id.id));
+    const filterLoads=  loads.filter((item)=>Number(item.id) ===Number(id.id));
     const [isOpen,setisOpen] = useState(false);
     const el = useRef();
     const onMoveBox = () => {
@@ -99,7 +99,7 @@ const Detail = () =>{
         <>
             <Header/>
             <DetailSection>
-            {filterLect.map((item)=><DetailNav key={item.id}>
+            {filterLoads.map((item)=><DetailNav key={item.id}>
                     <img src={item.img} alt="" />
                     <Text><h2>{item.title}</h2>
                     <h2>{item.name}</h2> 
@@ -123,4 +123,4 @@ const Detail = () =>{
     );
 }
 
-export default Detail;
+export default LoadDetail;

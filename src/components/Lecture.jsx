@@ -22,7 +22,7 @@ const Image = styled.div`
 const Text = styled.div`
     text-align:center;
     position:relative;
-    
+    color:black;
     & li {
         list-style:none;
         display: inline-block;
@@ -42,7 +42,7 @@ const Text = styled.div`
 const Lecture = ({ id,img, title, name, price, tag }) => {
 
     return (
-        <Link to={`/detail/${id}`}>
+        <Link to={`/load/${id}`}>
         <LectureCard>
             <Image>
                 <img src={img} alt="" />

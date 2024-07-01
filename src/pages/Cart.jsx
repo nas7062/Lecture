@@ -15,21 +15,30 @@ const CartList = styled.div`
     margin-top:50px;
     display:flex;
     position:relative;
-    left:50px;
+    left:0px;
     width:1500px;
     & img{
     width:300px;
-    margin-right:350px;
-    flex:0.3;
+    flex:0.1;
     }
     & p {
     display:flex;
     flex-direction:column;
-    margin-right:10px;
-    flex:0.1;
+    position:relative;
+    left:150px;
+    margin-left:10px;
+    flex:0.08;
+    }
+    &  span {
+         position:relative;
+         left:420px;
+         font-weight:600;
+         color:green;
+         cursor:pointer;
     }
     & button {
-    margin-left:400px;
+    position:relative;
+    left:680px;
     height:50px;
     width:50px;
     border:0px;
@@ -53,6 +62,7 @@ const Cart =()=>{
                 <table>
                     <th>강의</th>
                     <th>강의 정보</th>
+                    <th>구매하기</th>
                     <th>취소</th>
                 </table>
                 {cart.map((item)=> <CartList key={item.id}>
@@ -60,6 +70,7 @@ const Cart =()=>{
                     <p>{item.title}</p>
                     <p>{item.name}</p>
                     <p>{item.price}</p>
+                    <span>구매하기</span>
                     <button onClick={()=>dispatch(removeCart(item.id))}>X</button>
                 </CartList>)}
                 
