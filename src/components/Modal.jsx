@@ -21,8 +21,8 @@ const ModalContent = styled.div`
     height:400px;
     max-width: 100%;
     text-align:center;
-    & input{
-        width:400px;
+    input{
+        width:300px;
         height:30px;
         margin-bottom:10px;
     }
@@ -61,7 +61,7 @@ const ModalContent = styled.div`
 `;
 
 const Modal = ({ isOpen, onClose, children }) => {
-    if (!isOpen) 
+    if (!isOpen)
         return null;
     return (
         <ModalOverlay onClick={onClose}>

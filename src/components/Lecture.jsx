@@ -39,21 +39,21 @@ const Text = styled.div`
     }
 `
 
-const Lecture = ({ id,img, title, name, price, tag }) => {
+const Lecture = ({ id, img, title, name, price, tag }) => {
 
     return (
         <Link to={`/detail/${id}`}>
-        <LectureCard>
-            <Image>
-                <img src={img} alt="" />
-            </Image>
-            <Text>
-                <p>{title}</p>
-                <p>{name}</p>
-                <p>${price}</p>
-                <p>{tag.map((t)=><li key ={t.id}>{t}</li>)}</p>
-            </Text>
-        </LectureCard>
+            <LectureCard>
+                <Image>
+                    <img src={img} alt="" />
+                </Image>
+                <Text>
+                    <p>{title}</p>
+                    <p>{name}</p>
+                    <p>${price}</p>
+                    <p>{tag.map((t) => <li key={t.id}>{t}</li>)}</p>
+                </Text>
+            </LectureCard>
         </Link>
     );
 }

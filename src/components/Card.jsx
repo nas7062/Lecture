@@ -18,12 +18,23 @@ const Cardslice = styled.div`
     }
     > img{
         width:80px;
-    
+    }
+    @media screen and (max-width: 950px) {
+        
+        position:relative;
+        left:80px;
+        width:150px;
+    }
+    @media screen and (max-width: 750px) {
+        
+        position:relative;
+        left:80px;
+        width:100px;
     }
 `
-const Card = ({eng,kor,img,id})=>{
-   
-    return(
+const Card = ({ eng, kor, img, id }) => {
+
+    return (
         <Link to={`/load/${id}`}>
             <Cardslice>
                 <h3>{eng}</h3>

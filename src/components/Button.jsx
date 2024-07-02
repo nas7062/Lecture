@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 const Btn = styled.div`
     > img {
     width:100px;
@@ -12,13 +12,20 @@ const Btn = styled.div`
     }
     margin:10px 30px;
     cursor:pointer;
+    @media screen and (max-width: 850px) {
+        img{
+            width:80%;
+        }
+        position:relative;
+        left:80px;
+    }
 `
-const Button = ({img ,text, nav}) =>{
+const Button = ({ img, text, nav }) => {
     const navigate = useNavigate();
-    const OnNavigate = ()=>{
+    const OnNavigate = () => {
         navigate(nav);
     }
-    return(
+    return (
         <Btn onClick={OnNavigate}>
             <img src={img} alt="" />
             <p>{text}</p>

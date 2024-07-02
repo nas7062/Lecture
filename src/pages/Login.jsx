@@ -1,39 +1,39 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword ,createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
-const Login = ({onClose}) =>{
-    const [email,setemail] = useState("");
-    const [password,setpassword] =useState("");
-    
-    const LoginHandler = (e)=>{
+const Login = ({ onClose }) => {
+    const [email, setemail] = useState("");
+    const [password, setpassword] = useState("");
+
+    const LoginHandler = (e) => {
         e.preventDefault();
 
         signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            console.log(userCredential);
-            onClose(); // 로그인 성공 시 모달 닫기
-        })
-        .catch((e) => alert(e.message));
+            .then((userCredential) => {
+                console.log(userCredential);
+                onClose(); // 로그인 성공 시 모달 닫기
+            })
+            .catch((e) => alert(e.message));
         setemail("");
         setpassword("");
     }
-    const RegisterHandler = (e) =>{
+    const RegisterHandler = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 console.log(userCredential);
                 alert("회원가입이 되었습니다.")
-                
+
             })
             .catch((e) => alert(e.message));
-            setemail("");
+        setemail("");
         setpassword("");
     }
 
 
-    return(
+    return (
         <div >
-             <h2>로그인</h2>
+            <h2>로그인</h2>
             <form>
                 <input
                     type="email"

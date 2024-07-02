@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { imageList } from "../../public/util/imageList";
 
-const FadeIn = keyframes `
+const FadeIn = keyframes`
     0% {
         opacity: 0;
         transform: translate3d(0, 50%, 0);
@@ -19,7 +19,13 @@ const PointWarp = styled.div`
     position:relative;
     left:-80px;
     animation: ${FadeIn} 2s linear;
-       
+     @media screen and (max-width: 950px) {
+        font-size:0.8rem;
+        position:relative;
+        left:-80px;
+        display:inline-flex;
+        flex-direction:column;
+    }
 `
 const FirstSection = styled.div`
     border-radius:10px;
@@ -28,6 +34,26 @@ const FirstSection = styled.div`
     text-align:left;
     padding:30px;
     background-color:rgba(196,123,195,0.3);
+    @media screen and (max-width: 950px) {
+        font-size:0.8rem;
+        width:100px;
+        position:relative;
+        left:150px;
+        flex:0.3;
+    }
+    @media screen and (max-width: 750px) {
+        font-size:0.8rem;
+        width:100px;
+        position:relative;
+        left:150px;
+        flex:0.2;
+    }
+        @media screen and (max-width: 600px) {
+        font-size:0.8rem;
+        position:relative;
+        left:150px;
+        flex:0.15;
+    }
 `
 const SecondSection = styled.div`
     border-radius:10px;
@@ -37,6 +63,24 @@ const SecondSection = styled.div`
     padding:30px;
     flex:1;
     background-color:rgba(123,223,195,0.3);
+    @media screen and (max-width: 950px) {
+        position:relative;
+        left:150px;
+        flex:0.3;
+    }
+        @media screen and (max-width: 750px) {
+        font-size:0.8rem;
+        width:100px;
+        position:relative;
+        left:150px;
+        flex:0.2;
+    }
+         @media screen and (max-width: 600px) {
+        font-size:0.8rem;
+        position:relative;
+        left:120px;
+        width:80px;
+    }
 `
 const Image = styled.div`
 position:relative;
@@ -46,6 +90,15 @@ left:50px;
         width:200px;
         margin:0px 10px;
 }
+        @media screen and (max-width: 950px) {
+            img{
+            width:100px;
+            margin:0px 10px;
+            position:relative;
+            left:-20px;
+            top:-60px;
+        }
+    }
 `
 const Image2 = styled.div`
 position:relative;
@@ -55,6 +108,24 @@ left:400px;
         width:500px;
         margin:0px 10px;
 }
+    @media screen and (max-width: 950px) {
+        
+        img {
+            width:250px;
+            position:relative;
+            left:-100px;
+            top:50px;
+        }
+    }
+        @media screen and (max-width: 950px) {
+        
+        img {
+            width:250px;
+            position:relative;
+            left:-400px;
+            top:300px;
+        }
+    }
 `
 const SectionWrap = styled.div`
     display:flex;
@@ -69,6 +140,19 @@ const ThirdSection = styled.div`
     padding:30px;
     flex:1;
     background-color:rgba(153,123,223,0.3);
+    @media screen and (max-width: 950px) {
+        position:relative;
+        left:150px;
+        width:600px;
+
+    }
+    @media screen and (max-width: 750px) {
+        font-size:0.8rem;
+        width:300px;
+        position:relative;
+        left:150px;
+       
+    }
 `
 const Descript = styled.div`
     width:250px;
@@ -76,7 +160,7 @@ const Descript = styled.div`
 `
 const Point = () => {
     return (
-        <PointWarp id ="wrap">
+        <PointWarp id="wrap">
             <h2>학습 환경</h2>
             <h2>누구나 쉽고 재미있게 오랫동안 학습할 수 있어요!</h2>
             <SectionWrap>
@@ -104,13 +188,13 @@ const Point = () => {
             </SectionWrap>
             <ThirdSection>
                 <Descript>
-                    <h2>빈틈 없는 커리큘럼,</h2> 
+                    <h2>빈틈 없는 커리큘럼,</h2>
                     <h2>중복 없는 커리큘럼</h2>
                     <p>실무 경험이 풍부한 교육 전문가들이 직접 커리큘럼을 만듭니다.</p>
                     <p>외부 강사의 강의를 짜깁기해 빈틈과 중복이 많은 타 강의에 비해, 이해가 쉽고 몰입도가 높아요.</p>
                 </Descript>
                 <Image2>
-                        <img src={imageList[15]} alt="" />
+                    <img src={imageList[15]} alt="" />
                 </Image2>
             </ThirdSection>
 

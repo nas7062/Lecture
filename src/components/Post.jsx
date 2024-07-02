@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addPost } from "../reducer/postSlice";
 import Header from "./Header";
-import {  useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 
 const Form = styled.form`
@@ -43,17 +43,17 @@ const Btn = styled.div`
         cursor:pointer;
     }
 `
-const Post = () =>{
-    const id =useParams();
-    const Posts = useSelector((state)=>state.posts);
-    const [title,settitle] = useState('');
-    const [content,setcontent] = useState('');
+const Post = () => {
+    const id = useParams();
+    const Posts = useSelector((state) => state.posts);
+    const [title, settitle] = useState('');
+    const [content, setcontent] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const submitHandler = (e) =>{
+    const submitHandler = (e) => {
         e.preventDefault();
         const NewPost = {
-            id :Posts.length,
+            id: Posts.length,
             title,
             content
         }
@@ -61,24 +61,24 @@ const Post = () =>{
         settitle('');
         setcontent('');
     }
-    
-    return(
+
+    return (
         <>
-        <Header/>
-        <Form onSubmit={submitHandler}>
-            <Title >
-                <label>제목</label>
-                <input type="text" value={title} placeholder="제목을 작성해주세요" onChange={(e)=>settitle(e.target.value)}/>
-            </Title>
-            <Title>
-                <label >내용</label>
-                <textarea  placeholder="질문하고 싶은 내용을 작성해주세요." value={content} onChange={(e)=>setcontent(e.target.value)}></textarea>
-            </Title>
-            <Btn>
-                <button type="submit" onClick={()=>navigate(-1)} >작성하기</button>
-            </Btn>
-        </Form>
-        
+            <Header />
+            <Form onSubmit={submitHandler}>
+                <Title >
+                    <label>제목</label>
+                    <input type="text" value={title} placeholder="제목을 작성해주세요" onChange={(e) => settitle(e.target.value)} />
+                </Title>
+                <Title>
+                    <label >내용</label>
+                    <textarea placeholder="질문하고 싶은 내용을 작성해주세요." value={content} onChange={(e) => setcontent(e.target.value)}></textarea>
+                </Title>
+                <Btn>
+                    <button type="submit" onClick={() => navigate(-1)} >작성하기</button>
+                </Btn>
+            </Form>
+
         </>
     );
 }

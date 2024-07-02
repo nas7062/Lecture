@@ -8,6 +8,12 @@ const Img = styled.img`
    height: 300px;
   position:relative;
   left:400px;
+  @media screen and (max-width: 1100px) {
+    width:30%;
+}
+    @media screen and (max-width: 700px) {
+    width:0%;
+}
 `;
 const settings = {
   dots: true,
@@ -31,7 +37,7 @@ const BannerSlider = () => {
       <BSlider {...settings}>
         {ImgList.map((item) => <div key={item}>
           <Img src={item} alt="" />
-        </div>)}  
+        </div>)}
       </BSlider>
     </div>
   );

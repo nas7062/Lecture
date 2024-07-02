@@ -1,7 +1,8 @@
-import { useSelector ,useDispatch} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Header from "../components/Header";
 import { removeCart } from "../reducer/cartSlice";
 import styled from "styled-components";
+import Footer from "../components/Footer";
 
 const CartSection = styled.div`
     position:absolute;
@@ -49,15 +50,15 @@ const CartList = styled.div`
     flex:0.15;
     }
 `
-const Cart =()=>{
-    const Carts = useSelector((state)=>state.carts);
+const Cart = () => {
+    const Carts = useSelector((state) => state.carts);
     const cart = [].concat(...Carts);
     const dispatch = useDispatch();
     console.log(cart);
-    
-    return(
+
+    return (
         <div>
-            <Header/>
+            <Header />
             <CartSection>
                 <table>
                     <th>강의</th>
@@ -65,16 +66,17 @@ const Cart =()=>{
                     <th>구매하기</th>
                     <th>취소</th>
                 </table>
-                {cart.map((item)=> <CartList key={item.id}>
+                {cart.map((item) => <CartList key={item.id}>
                     <img src={item.img} alt={item.title} />
                     <p>{item.title}</p>
                     <p>{item.name}</p>
                     <p>{item.price}</p>
                     <span>구매하기</span>
-                    <button onClick={()=>dispatch(removeCart(item.id))}>X</button>
+                    <button onClick={() => dispatch(removeCart(item.id))}>X</button>
                 </CartList>)}
-                
+
             </CartSection>
+            
         </div>
     );
 }

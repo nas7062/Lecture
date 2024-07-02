@@ -65,14 +65,14 @@ const ComuDetail = () => {
     const dispatch = useDispatch();
     const [reple, Setreple] = useState("");
     const filterpost = posts.filter((item) => Number(item.id) === Number(id.id));
-    
+
     const RepleHandler = () => {
         if (reple) {
             dispatch((addRepple({ postId: Number(id.id), reple: reple })));
             Setreple("");
         }
     }
-    const LikeHandler = () =>{
+    const LikeHandler = () => {
         dispatch(PlusLike(Number(id.id)));
     }
     console.log(posts.repple);

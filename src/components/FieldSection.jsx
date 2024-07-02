@@ -14,7 +14,13 @@ const Title = styled.div`
     position:relative;
      left:400px;
      margin-top:200px;
+      @media screen and (max-width: 850px) {
+        
+            position:relative;
+            left:80px;
+    }
 `
+
 const FieldSection = () => {
     
     return (
