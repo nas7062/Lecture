@@ -4,7 +4,7 @@
         {
             "id": 1,
             "title": "Introduction to React",
-            "img" : "./src/assets/18.png",
+            "img" : "../assets/18.png",
             "name": "John Doe",
             "price": "49500",
             "tag" : ["Hot","New"],
@@ -36,7 +36,7 @@
         {
             "id": 2,
             "title": "Html/Css",
-            "img" : "../src/assets/14.png",
+            "img" : "../assets/14.png",
             "name": "harry Doe",
             "price": "45000",
             "tag" : ["Hot","New","update"],
@@ -79,7 +79,7 @@
         {
             "id": 3,
             "title": "java to Python",
-            "img" : "../../src/assets/15.png",
+            "img" : "../assets/15.png",
             "name": "John Bolock",
             "price": "79500",
             "tag" : ["Hot","New"],
@@ -111,7 +111,7 @@
         {
             "id": 4,
             "title": "Front and Back",
-            "img" : "src/assets/16.png",
+            "img" : "../assets/16.png",
             "name": "Jack Dier ",
             "price": "65500",
             "tag" : ["Hot"],
@@ -143,7 +143,7 @@
         {
             "id": 5,
             "title": "Online to React",
-            "img" : "/src/assets/17.png",
+            "img" : "../assets/17.png",
             "name": "phil Doe",
             "price": "39500",
             "tag" : ["Hot","New"],
@@ -175,7 +175,7 @@
         {
             "id": 6,
             "title": "Iot or BlockChain to React",
-            "img" : "/src/assets/19.png",
+            "img" : "../assets/19.png",
             "name": "John Dany",
             "price": "79500",
             "tag" : ["Hot","New"],
@@ -207,7 +207,7 @@
         {
             "id": 7,
             "title": "Introduction to Redux",
-            "img" : "/src/assets/20.png",
+            "img" : "../assets/20.png",
             "name": "Hill molck",
             "price": "69500",
             "tag" : ["Hot","New"],
@@ -239,7 +239,7 @@
         {
             "id": 8,
             "title": "TypeScript to React",
-            "img" : "/src/assets/21.png",
+            "img" : "../assets/21.png",
             "name": "John Type",
             "price": "51500",
             "tag" : ["Hot","New"],
@@ -273,7 +273,7 @@
         {
             "id": 1,
             "title": "Coding to LoadMap",
-            "img" : "/src/assets/load1.png",
+            "img" : "../assets/load1.png",
             "name": "John Doe",
             "price": "49500",
             "tag" : ["Hot","New"],
@@ -305,7 +305,7 @@
         {
             "id": 2,
             "title": "Web Coding LoadMap",
-            "img" : "/src/assets/load2.png",
+            "img" : "../assets/load2.png",
             "name": "Kane kin",
             "price": "49500",
             "tag" : ["Hot","New","update"],
@@ -337,7 +337,7 @@
         {
             "id": 3,
             "title": "CodingTest LoadMap",
-            "img" : "/src/assets/load3.png",
+            "img" : "../assets/load3.png",
             "name": "Jack Daniel",
             "price": "49500",
             "tag" : ["Hot","New"],
@@ -369,7 +369,7 @@
         {
             "id": 4,
             "title": "RoadMap Info",
-            "img" : "/src/assets/load4.png",
+            "img" : "../assets/load4.png",
             "name": "Wayne Roo",
             "price": "49500",
             "tag" : ["Hot","New"],
