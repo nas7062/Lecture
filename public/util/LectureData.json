@@ -4,7 +4,7 @@
         {
             "id": 1,
             "title": "Introduction to React",
-            "img" : "/src/assets/18.png",
+            "img" : "./src/assets/18.png",
             "name": "John Doe",
             "price": "49500",
             "tag" : ["Hot","New"],
