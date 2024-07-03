@@ -36,7 +36,7 @@
         {
             "id": 2,
             "title": "Html/Css",
-            "img" : "/src/assets/14.png",
+            "img" : "../src/assets/14.png",
             "name": "harry Doe",
             "price": "45000",
             "tag" : ["Hot","New","update"],
@@ -79,7 +79,7 @@
         {
             "id": 3,
             "title": "java to Python",
-            "img" : "/src/assets/15.png",
+            "img" : "../../src/assets/15.png",
             "name": "John Bolock",
             "price": "79500",
             "tag" : ["Hot","New"],
@@ -111,7 +111,7 @@
         {
             "id": 4,
             "title": "Front and Back",
-            "img" : "/src/assets/16.png",
+            "img" : "src/assets/16.png",
             "name": "Jack Dier ",
             "price": "65500",
             "tag" : ["Hot"],

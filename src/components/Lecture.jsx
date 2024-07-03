@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 const LectureCard = styled.div`
     width:250px;
     height:360px;
