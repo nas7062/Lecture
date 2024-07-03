@@ -21,7 +21,7 @@ const ModalContent = styled.div`
     height:400px;
     max-width: 100%;
     text-align:center;
-    input{
+    & input{
         width:300px;
         height:30px;
         margin-bottom:10px;

@@ -6,7 +6,7 @@ import { useContext, useRef, useState } from "react";
 import { LectContext } from "../App";
 import styled from "styled-components";
 import Intro from "../components/Intro";
-import Footer from "../components/Footer";
+import { auth } from "../firebase/firebase";
 const DetailSection = styled.div`
     position:absolute;
     top:25%;
@@ -119,6 +119,7 @@ const Detail = () => {
     const lectures = useContext(LectContext);
     const dispatch = useDispatch();
     const id = useParams();
+    
     const filterLect = lectures.filter((item) => Number(item.id) === Number(id.id));
     const [isOpen, setisOpen] = useState(false);
     const el = useRef();
@@ -149,7 +150,7 @@ const Detail = () => {
                     <Text><h2>{item.title}</h2>
                         <h2>{item.name}</h2>
                         {item.tag.map((item, idx) => <p key={idx}>#{item}</p>)}</Text>
-                    <button onClick={() => dispatch(addCart(item))}>
+                    <button onClick={() => { auth.currentUser && dispatch(addCart(item))}}>
                         ADD TO CART
                     </button>
                 </DetailNav>)}

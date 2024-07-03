@@ -78,6 +78,7 @@ const ReviewList = ({ id }) => {
                             <ListSec>
                                 <p>(평점: {review.score}) - {review.date}</p>
                                 <p>{review.content}</p>
+                                <p>{review.userId.slice(0, 7 )+"..."}</p>
                                 {review.userId === userId && (<>
                                     <button
                                         onClick={() => {

@@ -34,6 +34,7 @@ const PostSec = styled.div`
 `
 const PostList = ({ search }) => {
     const Posts = useSelector((state) => state.posts);
+    
     const filteredPosts = Posts.filter((post) =>
         post.title.toLowerCase().includes(search.toLowerCase()) ||
         post.content.toLowerCase().includes(search.toLowerCase())
@@ -48,6 +49,7 @@ const PostList = ({ search }) => {
                         <p>{post.content.length > 100 ? post.content.slice(0, 100) + "..." : post.content}</p>
                         <img src={imageList[20]} alt="" />
                         <span>{post.good || 0}</span>
+                        
                     </PostSec>
                 </Link>
             </>

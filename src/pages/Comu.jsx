@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import PostList from "../components/PostList";
 import styled from "styled-components";
 import { useState } from "react";
-
+import { auth } from "../firebase/firebase";
 const ComuSection = styled.div`
     
     position:absolute;
@@ -92,7 +92,7 @@ const Comu = () => {
                 <Nav>
                     <h2>자유게시판</h2>
                     <input type="input" placeholder="검색하세요" value={search} onChange={SearchHandler} />
-                    <button onClick={() => navigate('/post')}>글쓰기</button>
+                    <button onClick={() => {auth.currentUser && navigate('/post')}}>글쓰기</button>
                 </Nav>
                 <div>
                     <PostList search={search} />
