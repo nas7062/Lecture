@@ -3,7 +3,7 @@
   <h2>시작가이드</h2>
  
     npm i 
-    npm start
+    npm run dev
    
 </div>
 <div>
@@ -26,36 +26,41 @@
 <div>
     <h2>화면 구성</h2>
       <h3>메인페이지</h3>
-  <img width="500" height="300" src ="https://github.com/nas7062/redux-shopping/assets/84384915/589dfffb-d365-4801-ab05-1a0bbfa2f12b"/>
+  <img width="500" height="300" src ="https://github.com/nas7062/Lecture/assets/84384915/d6b9e4fe-5a42-4990-a3b6-b83add802ad6"/>
     <h3>상세페이지</h3>
-  <img width="500" height="300" src ="https://github.com/nas7062/redux-shopping/assets/84384915/771e5406-0962-4f0b-9304-58eaf7b15adb"/>
-  <h3>장바구니
-  <img width="500" height="300" src ="https://github.com/nas7062/redux-shopping/assets/84384915/69cbc8c6-9c9b-4768-a97f-9ea9a1afa2d6"/>
- <h3>상품목록</h3>
-  <img width="500" height="300" src ="https://github.com/nas7062/redux-shopping/assets/84384915/a39083f7-1bb7-41a2-b74e-cb3720592177"/>
+  <img width="500" height="300" src ="https://github.com/nas7062/Lecture/assets/84384915/72a8e521-6b51-491f-a864-064e2ce67666"/>
+  <img width="500" height="300" src ="https://github.com/nas7062/Lecture/assets/84384915/0bb0664c-609d-4022-937d-76280d640477"/>
+  <h3>장바구니</h3>
+  <img width="500" height="300" src ="https://github.com/nas7062/Lecture/assets/84384915/27a751a8-1f72-4592-878f-d3a6aa750da7"/>
+ <h3>커뮤니티</h3>
+  <img width="500" height="300" src ="https://github.com/nas7062/Lecture/assets/84384915/0c0826fc-0699-4b5b-a150-a1f84f0ee084"/>
 </div>
 <div>
   <h2>주요기능</h2>
   
 ### 회원 (User)
-회원가입 / 로그인/ 로그아웃/
+Firebase를 이용한 회원가입 / 로그인/ 로그아웃/ 모달구현 
   
-### 상품 (Item)
-상품 리스트 (메인페이지, 카테고리별 페이지) / 상품 상세 페이지 / 상품 정렬
+### 강의 (lecture)
+강의 리스트 (메인페이지, 카테고리별 페이지) / 강의 상세 페이지 / 강의 리뷰 / 강의 커리큘럼 
 
 ### 장바구니 (Cart)
 장바구니 담기 / 장바구니 조회 / 장바구니 삭제
 
+### 커뮤니티 (comu)
+커뮤니티 글 작성 / 검색기능 /업 버튼 /댓글 기능
 </div>
 <div>
   <h2>느낀점</h2>
-  <p>   React를 이용하여프로젝트를 진행하면서 데이터를 사용하고자 하는 </p>
-  <p>   자식 컴포넌트에게 불필요하게 많은 Props를 전달해야 하는 상황을 겪게 되었습니다.</p>
-<p>이런 경험을 통해 "전역 상태 관리"의 필요성을 체감하게 되었습니다.</p>
- <p> 그 후에 Redux를 공부하고 사용해보며 전역 상태관리의 장점을 알게 되었고</p>
-   <p>컴포넌트의 구조가 평평해졌고 데이터 전달을 위한 복잡한 계층 구조가 필요하지 않게 되었습니다.</p>
-   <p>또한 컴포넌트에 상태 업데이트 함수등을 선언하지 않아도 되어 코드의 가독성이 높아지게 됩니다.</p>
-   <p>Session Storage를 사용해 보았고 Local Storage와의 차이점을 알게 되었습니다.</p>
+  <p>   CreateContext와 UseContext 를 사용하여 제일 최상위 컴포넌트에서   </p>
+  <p>   axios로 json파일에서 데이터를 받아와 전역상태 관리를 해보았고 </p>
+<p>  redux에서 받은 데이터를 바로 storage에 저장할 수 있게 해주는  </p>
+ <p> redux persits를 이용하여 Local Storage에 저장해 보았습니다.</p>
+   <p>재사용이 가능한 모달 컴포넌트를 만들어 children을 이용하여 여러 모달이 사용되는 부분에서 </p>
+   <p>모달 컴포넌트를 사용하여 구현하였습니다.</p>
+   <p>코드의 중복되는 부분을 컴포넌트로 구현하여 재사용 가능하게 하도록 노력하였으며 </p>
+   <p>styled-component를 이용하여 동적으로 페이지를 꾸몄습니다.  </p>
+   <p>미디어 쿼리를 이용하여 반응형 웹사이트를 구현하였습니다.  </p>
 </div>
     
 </div>
