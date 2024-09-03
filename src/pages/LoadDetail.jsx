@@ -113,19 +113,20 @@ const New = styled.div`
     top:100px;
 `
 const LoadDetail = () => {
-    const loads = useContext(LoadContext);
+    const loads = useContext(LoadContext); // LoadContext에서 강의 데이터를 가져옴.
     const dispatch = useDispatch();
     const id = useParams();
-    const filterLoads = loads.filter((item) => Number(item.id) === Number(id.id));
+    const filterLoads = loads.filter((item) => Number(item.id) === Number(id.id));// ID에 해당하는 강의를 필터링.
     const [isOpen, setisOpen] = useState(false);
     const el = useRef();
+    const el2 = useRef();
     const onMoveBox = () => {
         el.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     const onMoveBox2 = () => {
         el2.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     };
-    const el2 = useRef();
+    // 스크롤 이동 함수 
     const CloseHandler = () => {
         setisOpen(false);
     }

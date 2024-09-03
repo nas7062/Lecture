@@ -80,11 +80,10 @@ const ReviewSec = styled.div`
 const Intro = ({ id, el, el2, el3 }) => {
     const lectures = useContext(LectContext);
     const filterLect = lectures.filter((item) => Number(item.id) === Number(id.id));
-
     const [openIndex, setOpenIndex] = useState(null);
     const [open, setopen] = useState(false);
     const ClickHandler = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+        setOpenIndex(openIndex === index ? null : index); 
     };
 
     return (

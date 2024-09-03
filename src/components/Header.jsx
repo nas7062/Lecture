@@ -32,7 +32,6 @@ const Head = styled.div`
      color:black;
     }
     
-    
 `
 const Nav = styled.div`
     margin:20px 10px;
@@ -76,19 +75,18 @@ const Nav = styled.div`
     a {
      text-decoration: none;
     }
-    
+
 }
 `
 const Header = ({ search, SearchHandler }) => {
-    const carts = useSelector((state) => state.carts);
-    const [open, setopen] = useState(false);
+    const carts = useSelector((state) => state.carts); // 장바구니 상태
+    const [open, setopen] = useState(false);// 모달의 열림/닫힘 상태를 관리
     const logoutHandler = () => {
         signOut(auth)
             .then(() => {
                 console.log("로그아웃 성공");
             })
             .catch((error) => {
-                console.error("로그아웃 오류:", error);
                 alert(error.message);
             });
 

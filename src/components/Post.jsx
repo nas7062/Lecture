@@ -44,7 +44,6 @@ const Btn = styled.div`
     }
 `
 const Post = () => {
-    const id = useParams();
     const Posts = useSelector((state) => state.posts);
     const [title, settitle] = useState('');
     const [content, setcontent] = useState('');

@@ -6,19 +6,17 @@ import { auth } from "../firebase/firebase";
 const Review = ({ onClose }) => {
     const { id } = useParams();
     const dispatch = useDispatch();
-    const reviews = useSelector((state) => state.reviews.reviews[id] || []);
-
+    const reviews = useSelector((state) => state.reviews.reviews[id] || []);  // 현재 게시물의 리뷰 없으면 반배열
     const [Content, setContent] = useState("");
     const [score, setscore] = useState(1);
     const today = new Date();
-    console.log();
     const ReviewHandler = () => {
         const newReview = {
             id: reviews.length + 1,
             date: `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일`,
             content: Content,
             score: score,
-            userId: auth.currentUser.providerData[0].uid,
+            userId: auth.currentUser.providerData[0].uid, // 현재 로그인된 사용자의 uid
         }
         dispatch(addReview({ id, review: newReview }));
         setContent("");

@@ -52,7 +52,7 @@ const CartList = styled.div`
 `
 const Cart = () => {
     const Carts = useSelector((state) => state.carts);
-    const cart = [].concat(...Carts);
+    const cart = Carts.flat(); // 'Carts'가 중첩된 배열일 단일배열로 만듬.
     const dispatch = useDispatch();
     console.log(cart);
 

@@ -24,7 +24,6 @@ const Cardlist = styled.div`
     justify-content : center;
 `
 const LoadMap = () => {
-    const id = useParams();
     return (
         <>
             <Title>
