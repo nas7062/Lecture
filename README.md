@@ -1,8 +1,61 @@
-# React + Vite
+### 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![detail.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/129c70b6-9382-4c1c-b30e-a71b4ec062ee/detail.jpg)
 
-Currently, two official plugins are available:
+### 디테일 페이지
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React와 Redux를 활용해 사용자가 강의 정보를 확인하고 장바구니에 추가할 수 있는 기능을 디테일 페이지에 구현하였습니다.
+
+- **동적 라우팅:** `react-router-dom`을 활용해 URL 파라미터에서 강의 ID를 가져와 동적으로 강의 상세 정보를 렌더링했습니다. `useParams` 훅을 사용해 강의 ID를 가져오고, 관련 데이터를 `filter`함수를 사용하여 사용자에게 보여줬습니다.
+- **반응형 UI 디자인:** `styled-components`를 이용해 반응형 사용자 인터페이스를 설계했습니다.
+- **Context API:** Context API를 활용해 강의 데이터를 컴포넌트 트리 전반에 걸쳐 관리하고 제공함으로써 컴포넌트 간 데이터 공유를 효율적으로 처리했습니다.
+- **Firebase 인증 통합:** Firebase를 사용해 사용자 인증을 구현했습니다. 사용자의 인증 상태에 따라  장바구니에 항목 추가 대한 접근을 제어하는 조건부 렌더링을 구현했습니다.
+- **사용자 상호작용 및 부드러운 스크롤링:** `useRef`와 스크롤 동작 속성을 사용해 페이지의 다양한 섹션으로 부드럽게 스크롤하는 기능을 구현해 사용자 경험을 개선했습니다.
+
+![cart.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/bd46d991-5098-4dec-a4a8-9ee862d5db59/cart.jpg)
+
+![detail2.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/21f5d17d-fd38-43f5-9a06-b097047443e1/detail2.jpg)
+
+### 리뷰작성 페이지
+
+- **Firebase 인증 연동:** Firebase인증을 활용해 `auth.currentUser`를 사용해 현재 로그인된 사용자의 고유 ID를 바탕으로 리뷰를 작성하도록 설정하였습니다.
+- **동적 라우팅:** `useParams`를 사용해 강의 ID에 맞춰 해당 강의의 리뷰를 동적으로 렌더링 되도록 구현하였습니다.
+- **자동 닫기 기능:** 리뷰 작성 후 `setTimeout`함수를 이용해 0.5초 후에 자동으로 모달을 닫아, 사용자의 편의성을 높이도록 구현하였습니다.
+
+### 프로젝트 개요
+
+**이 프로젝트는 Redux를 효과적으로 활용하여 강의 웹사이트를 개발하는 데 중점을 두었습니다. 주요 기능으로는 전역 상태 관리, 데이터 저장, 모달 컴포넌트 구현, 중복 코드의 컴포넌트화, 동적 스타일링, 반응형 웹사이트 등이 있으며, 각 기능은 사용자의 경험을 향상시키고 코드의 유지보수성을 높이는 것을 목표로 했습니다.**
+
+### 주요 구현 기능
+
+1. **전역 상태 관리:**
+    
+    `CreateContext`와 `useContext`를 사용하여 최상위 컴포넌트에서 `axios`를 통해 JSON 파일에서 데이터를 받아와 전역 상태로 관리했습니다.
+    
+2. **데이터 저장:**
+    
+    `Redux Persist`를 사용하여 Redux에서 관리하는 데이터를 `Local Storage`에 저장, 새로고침 시에도 상태가 유지되도록 구현했습니다.
+    
+3. **리뷰 작성 기능:**
+    
+    Redux와 `useSelector`, `useDispatch`를 활용해 사용자가 강의에 대한 리뷰를 작성하고 별점을 남길 수 있도록 했습니다. Firebase 인증을 연동하여, 로그인된 사용자만 리뷰를 작성할 수 있도록 했습니다.
+    
+4. **장바구니 기능:**
+    
+    `react-router-dom`의 동적 라우팅을 통해 특정 강의의 상세 정보를 렌더링하고, Redux를 활용해 사용자가 강의를 장바구니에 추가할 수 있는 기능을 구현했습니다.
+    
+5. **모달 컴포넌트:**
+    
+    재사용 가능한 모달 컴포넌트를 개발하여, 다양한 모달 창에서 `children` 속성을 통해 내용을 동적으로 표시할 수 있도록 했습니다.
+    
+6. **컴포넌트화 및 코드 재사용:**
+    
+    반복되는 UI와 로직을 별도의 컴포넌트로 분리하여 코드의 재사용성과 유지보수성을 높였습니다.
+    
+7. **동적 스타일링:**
+    
+    `styled-components`를 사용해 사용자 인터페이스를 동적으로 스타일링하고, 다양한 상태에 따라 스타일이 변경되도록 구현했습니다.
+    
+8. **반응형 웹사이트:**
+    
+    미디어 쿼리를 활용하여 다양한 화면 크기에 대응하는 반응형 웹사이트를 구현해, 모바일과 데스크탑 환경에서 모두 최적의 사용자 경험을 제공했습니다.
