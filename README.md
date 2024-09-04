@@ -1,6 +1,5 @@
 ### 
 
-![detail.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/129c70b6-9382-4c1c-b30e-a71b4ec062ee/detail.jpg)
 
 ### 디테일 페이지
 
@@ -12,9 +11,6 @@ React와 Redux를 활용해 사용자가 강의 정보를 확인하고 장바구
 - **Firebase 인증 통합:** Firebase를 사용해 사용자 인증을 구현했습니다. 사용자의 인증 상태에 따라  장바구니에 항목 추가 대한 접근을 제어하는 조건부 렌더링을 구현했습니다.
 - **사용자 상호작용 및 부드러운 스크롤링:** `useRef`와 스크롤 동작 속성을 사용해 페이지의 다양한 섹션으로 부드럽게 스크롤하는 기능을 구현해 사용자 경험을 개선했습니다.
 
-![cart.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/bd46d991-5098-4dec-a4a8-9ee862d5db59/cart.jpg)
-
-![detail2.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/81b9c66c-94a6-4794-bd8f-dfea25e36468/21f5d17d-fd38-43f5-9a06-b097047443e1/detail2.jpg)
 
 ### 리뷰작성 페이지
 
